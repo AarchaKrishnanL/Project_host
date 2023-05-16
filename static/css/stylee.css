@@ -1,0 +1,12 @@
+#id_gender, #id_blood_group{
+ list-style-type: none;
+ display: inline-flex;
+}
+
+#id_gender > li {
+ padding-left: 10px;
+}
+
+#id_blood_group > li {
+ padding-left: 10px;
+}

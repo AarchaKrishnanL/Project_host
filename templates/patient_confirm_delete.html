@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Delete {{ object.first_name }} {{ object.last_name }}?</h1>
+  <p>Are you sure you want to delete this patient's information?</p>
+  <form action="{% url 'patient_delete' object.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+    <a href="{% url 'patient_detail' object.pk %}">Cancel</a>
+  </form>
+{% endblock %}
